@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> 
+    body {
+        display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;   
+    flex-direction: column;
+    background-color: aqua;
+    }
+    #button1 {
+        cursor: pointer;
+        display: block;
+        padding:  15px 32px;
+    }
+    button:hover {
+  background-color: yellow;
+  font-size: 18px;
+}
+    </style>
+ <title>Balin Real Estate</title>
+</head>
+<body>
+    <h1>Click the button to change the background color!</h1>
+    <button type="button" id="button1">Change Color</button>
+    <script>
+       const btn =  document.getElementById("button1");
+       btn.addEventListener("click", () => {
+        const random = '#' + Math.floor((Math.random() * 16777215)).toString(16);
+        document.body.style.backgroundColor = random;
+       })
+    </script>
+</body>
+</html>
